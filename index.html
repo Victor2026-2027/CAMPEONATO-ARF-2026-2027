@@ -1,5 +1,7 @@
 <!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><title>Campeonato 2026-2027 · ARF San Clemente</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0a1440"><link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Campeonato ARF"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <style>
 :root{--bg:#0a1440;--pn:#0b1650;--gd:#ecb53c;--gl:#f4d68c;--ic:#7fb2ff;--tx:#f5f7ff;--mu:#9aa5b8;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 *{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
@@ -73,4 +75,5 @@ $('nav').onclick=e=>{if(e.target.dataset.t){tab=e.target.dataset.t;render()}};
 $('v').onclick=e=>{if(e.target.dataset.s){ser=e.target.dataset.s;render()}if(e.target.dataset.e){se=e.target.dataset.e;render()}if(e.target.dataset.v){sv=e.target.dataset.v;render()}};
 $('dl').onclick=()=>html2canvas($('card'),{backgroundColor:'#0b1650',scale:2}).then(c=>{const a=document.createElement('a');a.href=c.toDataURL('image/png');a.download='tabla.png';a.click()});
 render();
+if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(()=>{});
 </script></body></html>
